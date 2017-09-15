@@ -20,7 +20,9 @@ cd ./node_modules/conduit-angularjs/
 yarn
 patch ./src/js/config/app.constants.js ../../app.constants.js.patch
 cat ./src/js/config/app.constants.js
-gulp build
+rm -rf ./dist
+./node_modules/.bin/gulp build
+test -e ./dist
 yarn add http-server
 ./node_modules/.bin/http-server dist/ -a localhost -p 4000 &
 cd ../..
