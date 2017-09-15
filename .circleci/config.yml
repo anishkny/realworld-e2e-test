@@ -10,9 +10,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Setup & Test
-          command: yarn run setup
-          command: yarn test
+          name: Install, setup and test
+          command: |
+            yarn
+            yarn run setup
+            yarn test
       - store_artifacts:
           path: cypress/screenshots/
           path: cypress/videos/

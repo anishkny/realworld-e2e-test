@@ -1,13 +1,12 @@
 #!/bin/bash -x
 
-## Install top level dependencies
-yarn
+## Ensure presence of System Under Test (SUT)
 test -e node_modules/
 test -e node_modules/conduit-node/
 test -e node_modules/conduit-angularjs/
 
 ## Start app backend
-cd node_modules/conduit-node/
+cd ./node_modules/conduit-node/
 yarn
 yarn run start &
 cd ../..
