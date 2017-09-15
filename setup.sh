@@ -4,6 +4,7 @@
 yarn
 test -e node_modules/
 test -e node_modules/conduit-node/
+test -e node_modules/conduit-angularjs/
 
 ## Start app backend
 cd node_modules/conduit-node/
@@ -13,3 +14,12 @@ sleep 10
 
 ## Test backend endpoint
 curl 'http://localhost:3000/api/tags'
+
+## Start app frontend
+cd ./node_modules/conduit-angularjs/
+yarn
+patch ./src/js/config/app.constants.js ../../app.constants.js.patch
+cat ./src/js/config/app.constants.js
+gulp build
+yarn global add http-server
+http-server dist/ -a localhost -p 4000
