@@ -8,10 +8,11 @@ jobs:
       - checkout
       - run:
           name: Setup
-          command: npm run setup
+          command: yarn
+          command: yarn run setup
       - run:
           name: Test
-          command: npm test
+          command: yarn test
 
 workflows:
   version: 2

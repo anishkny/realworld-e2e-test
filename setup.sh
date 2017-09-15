@@ -3,7 +3,7 @@
 ## Start app backend
 cd node_modules/conduit-node/
 yarn
-node ./app.js &
+yarn run start &
 sleep 10
 
 ## Test backend endpoint
