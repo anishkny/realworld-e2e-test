@@ -21,5 +21,6 @@ yarn
 patch ./src/js/config/app.constants.js ../../app.constants.js.patch
 cat ./src/js/config/app.constants.js
 gulp build
-yarn global add http-server
-http-server dist/ -a localhost -p 4000
+yarn add http-server
+./node_modules/.bin/http-server dist/ -a localhost -p 4000 &
+sleep 10
