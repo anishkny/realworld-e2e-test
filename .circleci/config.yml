@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  test:
+    docker:
+      - image: circleci/node:8.5
+      - image: mongo:3.4.4
+    steps:
+      - checkout
+      - run:
+          name: Setup
+          command: npm run setup
+      - run:
+          name: Test
+          command: npm test
