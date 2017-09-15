@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "conduit-node": "https://github.com/gothinkster/node-express-realworld-example-app.git"
+  }
+}
