@@ -6,17 +6,15 @@ jobs:
         environment:
           TERM: xterm   ## Enable colors in the output
       - image: mongo:3.4.4
-      - image: circleci/node:8.5
 
     steps:
       - checkout
       - run:
-          name: Setup
+          name: Setup & Test
           command: yarn run setup
-      - run:
-          name: Test
           command: yarn test
       - store_artifacts:
+          path: cypress/screenshots/
           path: cypress/videos/
 
 workflows:
