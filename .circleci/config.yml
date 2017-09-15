@@ -12,6 +12,8 @@ jobs:
       - run:
           name: Test
           command: yarn test
+      - store_artifacts:
+          path: ./.cypress-videos/
 
 workflows:
   version: 2
