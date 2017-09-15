@@ -25,3 +25,6 @@ yarn add http-server
 ./node_modules/.bin/http-server dist/ -a localhost -p 4000 &
 cd ../..
 sleep 10
+
+## Test frontend
+curl 'http://localhost:4000/'
