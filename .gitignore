@@ -1,5 +1,5 @@
 node_modules/
-.cypress-videos/
+cypress/videos/
 .DS_Store
 .DS_Store?
 ._*

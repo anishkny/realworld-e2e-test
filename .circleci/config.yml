@@ -4,6 +4,10 @@ jobs:
     docker:
       - image: circleci/node:8.5
       - image: mongo:3.4.4
+      - image: cypress/internal:cy-0.19.4
+        environment:
+          TERM: xterm   ## Enable colors in the output
+
     steps:
       - checkout
       - run:
@@ -13,7 +17,7 @@ jobs:
           name: Test
           command: yarn test
       - store_artifacts:
-          path: ./.cypress-videos/
+          path: cypress/videos/
 
 workflows:
   version: 2
