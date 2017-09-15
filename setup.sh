@@ -10,6 +10,7 @@ test -e node_modules/conduit-angularjs/
 cd node_modules/conduit-node/
 yarn
 yarn run start &
+cd ../..
 sleep 10
 
 ## Test backend endpoint
@@ -23,4 +24,5 @@ cat ./src/js/config/app.constants.js
 gulp build
 yarn add http-server
 ./node_modules/.bin/http-server dist/ -a localhost -p 4000 &
+cd ../..
 sleep 10
