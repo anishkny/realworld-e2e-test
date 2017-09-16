@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash -e -x
 export PROJECT_ROOT=`pwd`
 
 ## Install dependencies
@@ -15,7 +15,7 @@ cd ./sut/node-express-realworld-example-app/
 yarn
 yarn run start &
 cd $PROJECT_ROOT
-sleep 10
+sleep 5
 
 ## Test backend endpoint
 curl 'http://localhost:3000/api/tags'
@@ -31,7 +31,7 @@ test -e ./dist
 yarn add http-server
 ./node_modules/.bin/http-server dist/ -a localhost -p 4000 &
 cd $PROJECT_ROOT
-sleep 10
+sleep 5
 
 ## Test frontend endpoint
 curl 'http://localhost:4000/'

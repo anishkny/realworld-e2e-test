@@ -1,7 +1,5 @@
 node_modules/
 sut/
-cypress/screenshots/
-cypress/videos/
 .DS_Store
 .DS_Store?
 ._*
