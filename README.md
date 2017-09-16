@@ -27,9 +27,13 @@ yarn run setup
 ```
 This step will start the backend server at port 3000 and frontend static server at port 4000. If all went well, you can navigate your browser to: http://localhost:4000/
 
-<!--
 ## Running the tests
 
+```
+yarn test
+```
+
+<!---
 Explain how to run the automated tests for this system
 
 ### Break down into end to end tests
@@ -81,4 +85,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone who's code was used
 * Inspiration
 * etc
--->
+--->
