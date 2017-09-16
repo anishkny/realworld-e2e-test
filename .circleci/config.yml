@@ -10,6 +10,7 @@ jobs:
       - run:
           name: Setup and test
           command: |
+            yarn
             yarn run setup
             yarn run test
 

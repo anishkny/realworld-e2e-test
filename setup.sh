@@ -1,9 +1,6 @@
 #!/bin/bash -x
 export PROJECT_ROOT=`pwd`
 
-## Install dependencies
-yarn
-
 ## Install system under test (SUT)
 rm -rf sut; mkdir sut; cd sut/
 git clone https://github.com/gothinkster/angularjs-realworld-example-app
