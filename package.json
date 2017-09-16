@@ -1,6 +1,10 @@
 {
   "scripts": {
     "setup": "./setup.sh",
-    "test": "echo 1"
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "^21.1.0",
+    "puppeteer": "^0.10.2"
   }
 }

@@ -13,6 +13,10 @@ jobs:
             yarn
             yarn run setup
             yarn run test
+      - store_artifacts:
+          path: ./.screenshots
+          destination: screenshots
+
 
 workflows:
   version: 2

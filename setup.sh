@@ -32,3 +32,7 @@ sleep 5
 
 ## Test frontend endpoint
 curl 'http://localhost:4000/'
+
+## Create screenshots folder if required
+cd $PROJECT_ROOT
+mkdir -p .screenshots/
