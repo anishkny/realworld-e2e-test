@@ -18,7 +18,7 @@ curl 'http://localhost:3000/api/tags'
 ## Start app frontend
 cd $SUT_FOLDER/node_modules/conduit-angularjs/
 yarn
-patch ./src/js/config/app.constants.js $PROJECT_ROOT/app.constants.js.patch
+cp $PROJECT_ROOT/app.constants.js.modified ./src/js/config/app.constants.js
 cat ./src/js/config/app.constants.js
 rm -rf ./dist
 ./node_modules/.bin/gulp build
