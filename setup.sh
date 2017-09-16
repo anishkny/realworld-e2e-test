@@ -1,4 +1,4 @@
-#!/bin/bash -e -x
+#!/bin/bash -x
 export PROJECT_ROOT=`pwd`
 
 ## Install dependencies
