@@ -4,8 +4,7 @@
     "test": "cypress run"
   },
   "dependencies": {
-    "conduit-angularjs": "https://github.com/gothinkster/angularjs-realworld-example-app",
-    "conduit-node": "https://github.com/gothinkster/node-express-realworld-example-app.git",
+    "casual": "^1.5.17",
     "cypress": "^0.20.0"
   }
 }
