@@ -8,7 +8,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: node-modules-{{ checksum "package.json" }}
+          key: node-modules-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: sut-{{ checksum "sut/yarn.lock" }}
       - run:
@@ -18,7 +18,7 @@ jobs:
             yarn run start
             yarn run test
       - save_cache:
-          key: node-modules-{{ checksum "package.json" }}
+          key: node-modules-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules
       - save_cache:
