@@ -4,7 +4,9 @@
     "test": "mkdir -p .screenshots/ && jest"
   },
   "dependencies": {
+    "casual": "^1.5.17",
     "jest": "^21.1.0",
     "puppeteer": "^0.10.2"
-  }
+  },
+  "license": "MIT"
 }
