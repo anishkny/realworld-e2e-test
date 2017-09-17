@@ -33,6 +33,7 @@ cd $SUT_FOLDER/node_modules/react-redux-realworld-example-app/
 patch --forward ./src/agent.js $SUT_FOLDER/agent.js.patch || true
 yarn
 BROWSER=none yarn start &
+sleep 5
 
 ## Test frontend endpoint
 curl 'http://localhost:4100/'
