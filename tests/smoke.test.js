@@ -32,7 +32,7 @@ test('Landing page loads', async() => {
 });
 
 test('Signup', async() => {
-  await page.goto('http://localhost:4000');
+  await page.goto('http://localhost:4000',  {waitUntil: 'networkidle'});
   await page.click('a[ui-sref="app.register"]');
   await page.screenshot({ path: '.screenshots/signup_01_start.png' });
   await page.focus('input[placeholder="Username"]');
