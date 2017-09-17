@@ -11,12 +11,8 @@ var newUser = {
 
 beforeAll(async() => {
   jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
-  browser = await puppeteer.launch(
-    /* {
-        headless: false,
-        slowMo: 250,
-      } */
-  );
+  const launchOptions = process.env.CI ? {} : { headless: false, slowMo: 250, };
+  browser = await puppeteer.launch(launchOptions);
   page = await browser.newPage();
   await page.setViewport({
     width: 1024,
@@ -30,9 +26,8 @@ afterAll(async() => {
 
 test('Landing page loads', async() => {
   await page.goto('http://localhost:4100');
-  await page.waitForSelector('nav.navbar');
-  await page.waitForSelector('div.home-page');
-  await page.waitForSelector('div.home-page');
+  expect(await page.$('nav.navbar')).toBeTruthy();
+  expect(await page.$('div.home-page')).toBeTruthy();
   await page.screenshot({ path: '.screenshots/landing_page.png' });
 });
 

@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "cd sut && yarn && yarn run start",
-    "test": "mkdir -p .screenshots/ && jest"
+    "pretest": "mkdir -p .screenshots/",
+    "test": "jest"
   },
   "dependencies": {
     "casual": "^1.5.17",
