@@ -1,4 +1,4 @@
-# RealWorld E2E Test
+# RealWorld End-to-End Test
 
 [![CircleCI](https://circleci.com/gh/anishkny/realworld-e2e-test.svg?style=shield)](https://circleci.com/gh/anishkny/realworld-e2e-test)
 
