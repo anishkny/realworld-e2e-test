@@ -29,7 +29,6 @@ jobs:
           path: ./.screenshots
           destination: screenshots
 
-
 workflows:
   version: 2
   test:

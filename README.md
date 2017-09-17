@@ -1,6 +1,8 @@
 # RealWorld E2E Test
 
-End-to-end testing example for a [RealWorld](realworld.io) [AngularJS](https://github.com/gothinkster/angularjs-realworld-example-app)/[NodeJS](https://github.com/gothinkster/node-express-realworld-example-app) stack using [Chrome Puppeteer](https://github.com/GoogleChrome/puppeteer).
+An end-to-end integration test example for a [RealWorld](https://realworld.io) [React](https://github.com/gothinkster/react-redux-realworld-example-app)/[NodeJS](https://github.com/gothinkster/node-express-realworld-example-app) stack using [Jest](https://facebook.github.io/jest/) and [Chrome Puppeteer](https://github.com/GoogleChrome/puppeteer).
+
+Demonstrates spinning up both the frontend (React/Redux) and backend (NodeJS) stacks for the RealWorld Conduit webapp, and then using Jest to drive a headless Chrome via Puppeteer.
 
 ## Getting Started
 
