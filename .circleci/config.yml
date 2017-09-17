@@ -10,19 +10,19 @@ jobs:
       - restore_cache:
           key: node-modules-{{ checksum "package.json" }}
       - restore_cache:
-          key: sut-{{ checksum "sut/package.json" }}
+          key: sut-{{ checksum "sut/yarn.lock" }}
       - run:
-          name: Setup and test
+          name: Start app and test
           command: |
             yarn
-            yarn run setup
+            yarn run start
             yarn run test
       - save_cache:
           key: node-modules-{{ checksum "package.json" }}
           paths:
             - ./node_modules
       - save_cache:
-          key: sut-{{ checksum "sut/package.json" }}
+          key: sut-{{ checksum "sut/yarn.lock" }}
           paths:
             - ./sut
       - store_artifacts:

@@ -1,10 +1,5 @@
 #!/bin/bash -x
-export PROJECT_ROOT=`pwd`
-export SUT_FOLDER=`pwd`/sut
-
-## Install system under test (SUT)
-cd $SUT_FOLDER
-yarn
+export SUT_FOLDER=`pwd`
 
 ## Start app backend
 cd $SUT_FOLDER/node_modules/conduit-node/
@@ -18,7 +13,7 @@ curl 'http://localhost:3000/api/tags'
 ## Start app frontend
 cd $SUT_FOLDER/node_modules/conduit-angularjs/
 yarn
-cp $PROJECT_ROOT/app.constants.js.modified ./src/js/config/app.constants.js
+cp $SUT_FOLDER/app.constants.js.modified ./src/js/config/app.constants.js
 cat ./src/js/config/app.constants.js
 rm -rf ./dist
 ./node_modules/.bin/gulp build
@@ -29,7 +24,3 @@ sleep 5
 
 ## Test frontend endpoint
 curl 'http://localhost:4000/'
-
-## Create screenshots folder if required
-cd $PROJECT_ROOT
-mkdir -p .screenshots/

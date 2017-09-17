@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "setup": "./setup.sh",
-    "test": "jest"
+    "start": "cd sut && yarn && yarn run start",
+    "test": "mkdir -p .screenshots/ && jest"
   },
   "dependencies": {
     "jest": "^21.1.0",
