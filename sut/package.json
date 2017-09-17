@@ -3,7 +3,6 @@
     "start": "./start.sh"
   },
   "dependencies": {
-    "conduit-angularjs": "https://github.com/gothinkster/angularjs-realworld-example-app.git",
     "conduit-node": "https://github.com/gothinkster/node-express-realworld-example-app.git",
     "react-redux-realworld-example-app": "https://github.com/gothinkster/react-redux-realworld-example-app"
   },
