@@ -15,15 +15,22 @@ curl 'http://localhost:3000/api/tags'
 
 
 ########################################
-# Start React-Redux app forntend
+# Start React-Redux app frontend
 ########################################
 cd $SUT_FOLDER/node_modules/react-redux-realworld-example-app/
 
 # Make API_ROOT point to local backend
 patch --forward ./src/agent.js $SUT_FOLDER/agent.js.patch || true
 yarn
-BROWSER=none yarn start &
+rm -rf ./build/
+yarn build
+$SUT_FOLDER/node_modules/.bin/http-server -p 4100 -a localhost ./build/ &
 sleep 5
 
 # Test frontend
 curl 'http://localhost:4100/'
+
+
+########################################
+# Done!
+########################################

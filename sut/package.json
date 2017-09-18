@@ -4,6 +4,7 @@
   },
   "dependencies": {
     "conduit-node": "https://github.com/gothinkster/node-express-realworld-example-app.git",
+    "http-server": "^0.10.0",
     "react-redux-realworld-example-app": "https://github.com/gothinkster/react-redux-realworld-example-app"
   },
   "license": "MIT"
