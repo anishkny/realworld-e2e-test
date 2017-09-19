@@ -9,13 +9,3 @@ install: yarn
 before_script: yarn run start
 
 script: yarn test
-
-deploy:
-  provider: releases
-  skip_cleanup: true
-  api_key:
-    secure: GC49FxwYfr00o8y61SoNcsiXXh1Y5eZcQV7iSXXC+eo842XMwfO3OgZobqphTGAqK8xOCn8y41HA4ZUZkw5KbIabWQTbvYgwvSN9R0gflmCmulYqLlEHsXSLfs8tIbVc6U2g/51UxXcBo0tdKlVS98tZi5r2kJQqqLqkWKgYn8p4MTkzRP5YVKrML/FCPYTm7EibqinI/TARsa22QPKlb0+xSCH3SwMHnjw8OHWpoAX9rDAnRhuPXIETwHh5Qz7frQWlsOoehH+E0k55NoxtocBEHBWX8qD0/fs0KQhJ0nm0sKl4+C8UhQliwJE1aVrGd/KWV3nATnlVAiMT3k9T2I5SmlAkhqrbFvfrMCeBqSxM/LV1I3uHzGtgyMgkXTbo4m+XeD2znbXcG4RQNvNIARDq7HnDnOj1uzfD507NGUt8LFiP/Dy/tfexTKtQVtns2veQXxICKP0GnzdUExfLxTfaTa6GwhunWe5LYoqfIWR6AHCWSmRhy+kdFgQ02feymOCCuaPMO8w2C2wnKkk0ya3vuAtwnCk5Bi+JfKHIHt4UBk+oU+AHN/ahSKnMn5tAOkCi3madixPlbtMfZCrwIOgiTzxmJuP2U4d1rr4v1irUZyl3dwXOeeW9ZYF/JW9P0pygEatLcdtuMBmWcNJnw8c7MWW5kMGo0pn3WDJH0ik=
-  file_glob: true
-  file: .screenshots/*
-  on:
-    repo: anishkny/realworld-e2e-test
