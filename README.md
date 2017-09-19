@@ -1,12 +1,13 @@
 # RealWorld End-to-End Test
 
 [![CircleCI](https://circleci.com/gh/anishkny/realworld-e2e-test.svg?style=shield)](https://circleci.com/gh/anishkny/realworld-e2e-test)
+[![Travis](https://img.shields.io/travis/anishkny/realworld-e2e-test.svg)](https://travis-ci.org/anishkny/realworld-e2e-test)
 
 An end-to-end integration test example for a [RealWorld](https://realworld.io) [React](https://github.com/gothinkster/react-redux-realworld-example-app)/[NodeJS](https://github.com/gothinkster/node-express-realworld-example-app) stack using [Jest](https://facebook.github.io/jest/) and [Chrome Puppeteer](https://github.com/GoogleChrome/puppeteer).
 
 Demonstrates spinning up both the frontend (React/Redux) and backend (NodeJS) stacks for the RealWorld Conduit webapp, and then using Jest to drive a headless Chrome via Puppeteer.
 
-Designed to work with [CircleCI](https://circleci.com/gh/anishkny/realworld-e2e-test).
+Designed to work with [CircleCI](https://circleci.com/gh/anishkny/realworld-e2e-test) and [Travis CI](https://travis-ci.org/anishkny/realworld-e2e-test).
 
 ## Getting Started
 
