@@ -1,4 +1,4 @@
-# RealWorld End-to-End Test
+# RealWorld End-to-End Integration Testing
 
 [![CircleCI](https://circleci.com/gh/anishkny/realworld-e2e-test.svg?style=shield)](https://circleci.com/gh/anishkny/realworld-e2e-test)
 [![Travis](https://img.shields.io/travis/anishkny/realworld-e2e-test.svg)](https://travis-ci.org/anishkny/realworld-e2e-test)
