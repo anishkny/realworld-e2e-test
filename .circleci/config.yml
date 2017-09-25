@@ -1,7 +1,7 @@
 version: 2
 
 jobs:
-  test:
+  build:
     docker:
       - image: circleci/node:8.5.0-browsers
       - image: circleci/mongo:3.4.9
@@ -29,8 +29,3 @@ jobs:
           path: ./.screenshots
           destination: screenshots
 
-workflows:
-  version: 2
-  test:
-    jobs:
-      - test
