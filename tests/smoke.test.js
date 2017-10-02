@@ -79,3 +79,16 @@ test('New Post', async() => {
   //TODO: Assert on created article
 
 });
+
+test('Add Comment', async() => {
+  var newComment = casual.sentence;
+
+  await page.focus('textarea[placeholder="Write a comment..."]');
+  await page.type(newComment);
+  await page.screenshot({ path: '.screenshots/new_post_03_comment_filled.png' });
+  await page.click('button[type="submit"]');
+  await page.waitForSelector('p.card-text');
+  await page.screenshot({ path: '.screenshots/new_post_02_comment_submitted.png' });
+  //TODO: Assert on created comment
+
+});
