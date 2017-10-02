@@ -56,3 +56,26 @@ test('Signup', async() => {
   expect(profileLinkInnerText).toBe(expectedUsername);
 
 });
+
+test('New Post', async() => {
+
+  var newArticle = {
+    title: casual.title,
+    description: casual.description,
+    body: casual.text,
+  };
+  await page.click('a[href*="editor"]');
+  await page.waitForSelector('div.editor-page');
+  await page.focus('input[placeholder="Article Title"]');
+  await page.type(newArticle.title);
+  await page.focus('input[placeholder="What\'s this article about?"]');
+  await page.type(newArticle.description);
+  await page.focus('textarea[placeholder="Write your article (in markdown)"]');
+  await page.type(newArticle.body);
+  await page.screenshot({ path: '.screenshots/new_post_01_filled.png' });
+  await page.click('button');
+  await page.waitForSelector('div.article-page');
+  await page.screenshot({ path: '.screenshots/new_post_02_submitted.png' });
+  //TODO: Assert on created article
+
+});
