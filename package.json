@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "cd sut && yarn && yarn run start",
+    "start": "cd packages && yarn && yarn run start",
     "pretest": "mkdir -p .screenshots/",
     "test": "jest"
   },
