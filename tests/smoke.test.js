@@ -31,6 +31,23 @@ test('Landing page loads', async() => {
   await page.screenshot({ path: '.screenshots/landing_page.png' });
 });
 
+test('Sign In', async() => {
+
+  // Sign in with invalid user
+  await page.goto('http://localhost:4100');
+  await page.click('a[href*="login"]');
+  await page.screenshot({ path: '.screenshots/signin_01_start.png' });
+  await page.focus('input[placeholder="Email"]');
+  await page.type(newUser.email);
+  await page.focus('input[placeholder="Password"]');
+  await page.type(newUser.password);
+  await page.screenshot({ path: '.screenshots/signin_02_filled.png' });
+  await page.click('button');
+
+  expect(await page.$('.error-messages')).toBeTruthy();
+
+});
+
 test('Signup', async() => {
 
   // Register new user
@@ -92,3 +109,4 @@ test('Add Comment', async() => {
   //TODO: Assert on created comment
 
 });
+
