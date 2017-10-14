@@ -43,8 +43,9 @@ test('Sign In', async() => {
   await page.type(newUser.password);
   await page.screenshot({ path: '.screenshots/signin_02_filled.png' });
   await page.click('button');
-
-  expect(await page.$('.error-messages')).toBeTruthy();
+  var errorMessage = await page.$('.error-messages');
+  await page.screenshot({ path: '.screenshots/signin_03_error.png' });
+  expect(errorMessage).toBeTruthy();
 
 });
 
@@ -109,4 +110,3 @@ test('Add Comment', async() => {
   //TODO: Assert on created comment
 
 });
-

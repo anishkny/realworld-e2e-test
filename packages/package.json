@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "./start.sh"
+    "start": "./start.sh",
+    "stop": "lsof -ti:3000 -ti:4100 | xargs kill"
   },
   "dependencies": {
     "conduit-node": "https://github.com/gothinkster/node-express-realworld-example-app.git",
