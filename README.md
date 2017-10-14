@@ -1,5 +1,7 @@
 # RealWorld End-to-End Integration Testing
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/anishkny/realworld-e2e-test.svg)](https://greenkeeper.io/)
+
 [![CircleCI](https://circleci.com/gh/anishkny/realworld-e2e-test.svg?style=shield)](https://circleci.com/gh/anishkny/realworld-e2e-test)
 [![Travis](https://img.shields.io/travis/anishkny/realworld-e2e-test.svg)](https://travis-ci.org/anishkny/realworld-e2e-test)
 
