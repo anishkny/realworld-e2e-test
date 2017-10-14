@@ -31,7 +31,7 @@ test('Landing page loads', async() => {
   await page.screenshot({ path: '.screenshots/landing_page.png' });
 });
 
-test('Sign In', async() => {
+test('Sign in with invalid credentials', async() => {
 
   // Sign in with invalid user
   await page.goto('http://localhost:4100');
