@@ -43,9 +43,9 @@ test('Sign In', async() => {
   await page.type(newUser.password);
   await page.screenshot({ path: '.screenshots/signin_02_filled.png' });
   await page.click('button');
-  var errorMessage = await page.$('.error-messages');
+  await page.waitForSelector('ul.error-messages > li');
   await page.screenshot({ path: '.screenshots/signin_03_error.png' });
-  expect(errorMessage).toBeTruthy();
+  expect(await page.$('ul.error-messages > li')).toBeTruthy();
 
 });
 
