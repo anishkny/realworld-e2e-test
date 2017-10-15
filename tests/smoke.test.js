@@ -11,7 +11,7 @@ var newUser = {
 
 beforeAll(async() => {
   jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
-  const launchOptions = process.env.CI ? {} : { headless: false, slowMo: 250, };
+  const launchOptions = process.env.CI ? {} : { headless: false, slowMo: 5, };
   browser = await puppeteer.launch(launchOptions);
   page = await browser.newPage();
   await page.setViewport({
@@ -37,10 +37,8 @@ test('Sign in with invalid credentials', async() => {
   await page.goto('http://localhost:4100');
   await page.click('a[href*="login"]');
   await page.screenshot({ path: '.screenshots/signin_01_start.png' });
-  await page.focus('input[placeholder="Email"]');
-  await page.type(newUser.email);
-  await page.focus('input[placeholder="Password"]');
-  await page.type(newUser.password);
+  await page.type('input[placeholder="Email"]', newUser.email);
+  await page.type('input[placeholder="Password"]', newUser.password);
   await page.screenshot({ path: '.screenshots/signin_02_filled.png' });
   await page.click('button');
   await page.waitForSelector('ul.error-messages > li');
@@ -55,12 +53,9 @@ test('Signup', async() => {
   await page.goto('http://localhost:4100');
   await page.click('a[href*="register"]');
   await page.screenshot({ path: '.screenshots/signup_01_start.png' });
-  await page.focus('input[placeholder="Username"]');
-  await page.type(newUser.username);
-  await page.focus('input[placeholder="Email"]');
-  await page.type(newUser.email);
-  await page.focus('input[placeholder="Password"]');
-  await page.type(newUser.password);
+  await page.type('input[placeholder="Username"]', newUser.username);
+  await page.type('input[placeholder="Email"]', newUser.email);
+  await page.type('input[placeholder="Password"]', newUser.password);
   await page.screenshot({ path: '.screenshots/signup_02_filled.png' });
   await page.click('button');
 
@@ -84,12 +79,9 @@ test('New Post', async() => {
   };
   await page.click('a[href*="editor"]');
   await page.waitForSelector('div.editor-page');
-  await page.focus('input[placeholder="Article Title"]');
-  await page.type(newArticle.title);
-  await page.focus('input[placeholder="What\'s this article about?"]');
-  await page.type(newArticle.description);
-  await page.focus('textarea[placeholder="Write your article (in markdown)"]');
-  await page.type(newArticle.body);
+  await page.type('input[placeholder="Article Title"]', newArticle.title);
+  await page.type('input[placeholder="What\'s this article about?"]', newArticle.description);
+  await page.type('textarea[placeholder="Write your article (in markdown)"]', newArticle.body);
   await page.screenshot({ path: '.screenshots/new_post_01_filled.png' });
   await page.click('button');
   await page.waitForSelector('div.article-page');
@@ -101,8 +93,7 @@ test('New Post', async() => {
 test('Add Comment', async() => {
   var newComment = casual.sentence;
 
-  await page.focus('textarea[placeholder="Write a comment..."]');
-  await page.type(newComment);
+  await page.type('textarea[placeholder="Write a comment..."]', newComment);
   await page.screenshot({ path: '.screenshots/new_post_03_comment_filled.png' });
   await page.click('button[type="submit"]');
   await page.waitForSelector('p.card-text');
