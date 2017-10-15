@@ -14,7 +14,8 @@ jobs:
       - run:
           name: Setup greenkeeper-lockfile
           command: |
-            yarn global add greenkeeper-lockfile@1
+            npm install -g greenkeeper-lockfile@1
+            which greenkeeper-lockfile-update greenkeeper-lockfile-upload
             greenkeeper-lockfile-update
       - run:
           name: Start app and test
