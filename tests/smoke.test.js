@@ -12,7 +12,14 @@ var newUser = {
 beforeAll(async() => {
   jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
   const launchOptions = process.env.CI ? {} : { headless: false, slowMo: 5, };
-  Object.assign(launchOptions, {args: ['--no-sandbox']});
+
+  // Workaround till https://github.com/GoogleChrome/puppeteer/issues/290 is fixed
+  if (process.env.LAUNCH_CHROME_NO_SANDBOX) {
+    console.warn('Launching Chrome with "--no-sandbox" option. ' +
+      'This is not recommended due to security reasons!');
+    Object.assign(launchOptions, { args: ['--no-sandbox'] });
+  }
+
   browser = await puppeteer.launch(launchOptions);
   page = await browser.newPage();
   await page.setViewport({
@@ -89,12 +96,12 @@ test('New Post', async() => {
   await page.screenshot({ path: '.screenshots/new_post_02_submitted.png' });
 
   // Assert on created article
-  var titleSelector = `h1`;
+  var titleSelector = 'h1';
   await page.waitForSelector(titleSelector);
   var titleInnerText = await page.$eval(titleSelector, el => el.innerText);
   expect(titleInnerText).toBe(newArticle.title);
 
-  var bodySelector = `p`;  
+  var bodySelector = 'p';
   await page.waitForSelector(bodySelector);
   var bodyInnerText = await page.$eval(bodySelector, el => el.innerText);
   expect(bodyInnerText).toBe(newArticle.body);
@@ -111,7 +118,7 @@ test('Add Comment', async() => {
   await page.screenshot({ path: '.screenshots/new_post_02_comment_submitted.png' });
 
   // Assert on created comment
-  var commentSelector = `p.card-text`;  
+  var commentSelector = 'p.card-text';
   await page.waitForSelector(commentSelector);
   var commentInnerText = await page.$eval(commentSelector, el => el.innerText);
   expect(commentInnerText).toBe(newComment);
