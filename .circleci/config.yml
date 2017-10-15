@@ -12,11 +12,20 @@ jobs:
       - restore_cache:
           key: sut-node-modules-{{ checksum "packages/yarn.lock" }}
       - run:
+          name: Setup greenkeeper-lockfile
+          command: |
+            yarn global add greenkeeper-lockfile@1
+            greenkeeper-lockfile-update
+      - run:
           name: Start app and test
           command: |
             yarn
             yarn run start
             yarn run test
+      - run:
+          name: Upload greenkeeper-lockfile
+          command: |
+            greenkeeper-lockfile-upload
       - save_cache:
           key: node-modules-{{ checksum "yarn.lock" }}
           paths:
