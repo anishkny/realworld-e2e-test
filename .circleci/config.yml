@@ -14,7 +14,7 @@ jobs:
       - run:
           name: Setup greenkeeper-lockfile
           command: |
-            npm install -g greenkeeper-lockfile@1
+            sudo npm install -g greenkeeper-lockfile@1
             which greenkeeper-lockfile-update greenkeeper-lockfile-upload
             greenkeeper-lockfile-update
       - run:
