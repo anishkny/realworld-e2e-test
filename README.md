@@ -43,6 +43,8 @@ This step will start the backend server at port 3000 and frontend static server 
 yarn test
 ```
 
+[![asciicast](https://asciinema.org/a/147023.png)](https://asciinema.org/a/147023)
+
 <!---
 Explain how to run the automated tests for this system
 
