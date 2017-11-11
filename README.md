@@ -10,6 +10,8 @@ Demonstrates spinning up both the frontend (React/Redux) and backend (NodeJS) st
 
 Designed to work with [CircleCI](https://circleci.com/gh/anishkny/realworld-e2e-test) and [Travis CI](https://travis-ci.org/anishkny/realworld-e2e-test).
 
+![Screencast](https://storage.googleapis.com/realworld-e2e-test/realworld-e2e-test.mov.gif)
+
 ## Getting Started
 
 ### Prerequisites
