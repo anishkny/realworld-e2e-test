@@ -35,7 +35,7 @@ Install dependencies and start the app aka system under test (SUT)
 yarn
 yarn run start
 ```
-This step will start the backend server at port 3000 and frontend static server at port 4000. If all went well, you can navigate your browser to: http://localhost:4000/
+This step will start the backend server at port 3000 and frontend static server at port 4100. If all went well, you can navigate your browser to: http://localhost:4100/
 
 ## Running the tests
 
