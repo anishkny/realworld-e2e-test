@@ -1,6 +1,7 @@
 const casual = require('casual');
 const puppeteer = require('puppeteer');
 const expect = require('chai').expect;
+const castro = require('castro');
 
 var browser = null;
 var page = null;
@@ -20,6 +21,10 @@ before(async () => {
     Object.assign(launchOptions, { args: ['--no-sandbox'] });
   }
 
+  movie = new castro.Castro();
+  movie.setLocation('.screenshots/recording.mp4');
+  movie.start();
+
   browser = await puppeteer.launch(launchOptions);
   page = await browser.newPage();
   await page.setViewport({
@@ -30,6 +35,7 @@ before(async () => {
 
 after(async () => {
   await browser.close();
+  movie.stop();
 });
 
 it('Landing page loads', async () => {
