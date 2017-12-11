@@ -5,9 +5,9 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/anishkny/realworld-e2e-test.svg)](https://greenkeeper.io/)
 [![Known Vulnerabilities](https://snyk.io/test/github/anishkny/realworld-e2e-test/badge.svg)](https://snyk.io/test/github/anishkny/realworld-e2e-test)
 
-An end-to-end integration test example for a [RealWorld](https://realworld.io) [React](https://github.com/gothinkster/react-redux-realworld-example-app)/[NodeJS](https://github.com/gothinkster/node-express-realworld-example-app) stack using [Jest](https://facebook.github.io/jest/) and [Chrome Puppeteer](https://github.com/GoogleChrome/puppeteer).
+An end-to-end integration test example for a [RealWorld](https://realworld.io) [React](https://github.com/gothinkster/react-redux-realworld-example-app)/[NodeJS](https://github.com/gothinkster/node-express-realworld-example-app) stack using [Mocha](https://mochajs.org) and [Chrome Puppeteer](https://github.com/GoogleChrome/puppeteer).
 
-Demonstrates spinning up both the frontend (React/Redux) and backend (NodeJS) stacks for the RealWorld Conduit webapp, and then using Jest to drive a headless Chrome via Puppeteer.
+Demonstrates spinning up both the frontend (React/Redux) and backend (NodeJS) stacks for the RealWorld Conduit webapp, and then using Mocha to drive a headless Chrome via Puppeteer.
 
 Designed to work with [CircleCI](https://circleci.com/gh/anishkny/realworld-e2e-test) and [Travis CI](https://travis-ci.org/anishkny/realworld-e2e-test).
 
