@@ -3,11 +3,12 @@
     "start": "cd packages && yarn && yarn run start",
     "stop": "cd packages && yarn run stop",
     "pretest": "mkdir -p .screenshots/",
-    "test": "jest"
+    "test": "mocha"
   },
   "dependencies": {
     "casual": "^1.5.17",
-    "jest": "^21.1.0",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
     "puppeteer": "^0.13.0"
   },
   "license": "MIT"

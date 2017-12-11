@@ -1,5 +1,6 @@
 const casual = require('casual');
 const puppeteer = require('puppeteer');
+const expect = require('chai').expect;
 
 var browser = null;
 var page = null;
@@ -9,8 +10,7 @@ var newUser = {
   password: casual.password
 };
 
-beforeAll(async() => {
-  jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
+before(async () => {
   const launchOptions = process.env.CI ? {} : { headless: false, slowMo: 5, };
 
   // Workaround till https://github.com/GoogleChrome/puppeteer/issues/290 is fixed
@@ -28,18 +28,18 @@ beforeAll(async() => {
   });
 });
 
-afterAll(async() => {
+after(async () => {
   await browser.close();
 });
 
-test('Landing page loads', async() => {
+it('Landing page loads', async () => {
   await page.goto('http://localhost:4100');
-  expect(await page.$('nav.navbar')).toBeTruthy();
-  expect(await page.$('div.home-page')).toBeTruthy();
+  expect(await page.$('nav.navbar')).to.be.ok;
+  expect(await page.$('div.home-page')).to.be.ok;
   await page.screenshot({ path: '.screenshots/landing_page.png' });
 });
 
-test('Sign in with invalid credentials', async() => {
+it('Sign in with invalid credentials', async () => {
 
   // Sign in with invalid user
   await page.goto('http://localhost:4100');
@@ -51,11 +51,11 @@ test('Sign in with invalid credentials', async() => {
   await page.click('button');
   await page.waitForSelector('ul.error-messages > li');
   await page.screenshot({ path: '.screenshots/signin_03_error.png' });
-  expect(await page.$('ul.error-messages > li')).toBeTruthy();
+  expect(await page.$('ul.error-messages > li')).to.be.ok;
 
 });
 
-test('Signup', async() => {
+it('Signup', async () => {
 
   // Register new user
   await page.goto('http://localhost:4100');
@@ -74,11 +74,11 @@ test('Signup', async() => {
   await page.screenshot({ path: '.screenshots/signup_03_done.png' });
   var profileLinkInnerText = await page.$eval(profileLinkSelector, el => el.innerText);
   console.log(`profileLinkInnerText = [${profileLinkInnerText}]`);
-  expect(profileLinkInnerText).toBe(expectedUsername);
+  expect(profileLinkInnerText).to.equal(expectedUsername);
 
 });
 
-test('New Post', async() => {
+it('New Post', async () => {
 
   var newArticle = {
     title: casual.title,
@@ -99,16 +99,16 @@ test('New Post', async() => {
   var titleSelector = 'h1';
   await page.waitForSelector(titleSelector);
   var titleInnerText = await page.$eval(titleSelector, el => el.innerText);
-  expect(titleInnerText).toBe(newArticle.title);
+  expect(titleInnerText).to.equal(newArticle.title);
 
   var bodySelector = 'p';
   await page.waitForSelector(bodySelector);
   var bodyInnerText = await page.$eval(bodySelector, el => el.innerText);
-  expect(bodyInnerText).toBe(newArticle.body);
+  expect(bodyInnerText).to.equal(newArticle.body);
 
 });
 
-test('Add Comment', async() => {
+it('Add Comment', async () => {
   var newComment = casual.sentence;
 
   await page.type('textarea[placeholder="Write a comment..."]', newComment);
@@ -121,6 +121,6 @@ test('Add Comment', async() => {
   var commentSelector = 'p.card-text';
   await page.waitForSelector(commentSelector);
   var commentInnerText = await page.$eval(commentSelector, el => el.innerText);
-  expect(commentInnerText).toBe(newComment);
+  expect(commentInnerText).to.equal(newComment);
 
 });
