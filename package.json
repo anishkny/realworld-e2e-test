@@ -6,7 +6,6 @@
     "test": "mocha"
   },
   "dependencies": {
-    "castro": "^0.0.3",
     "casual": "^1.5.17",
     "chai": "^4.1.2",
     "mocha": "^4.0.1",
