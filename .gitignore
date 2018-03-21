@@ -1,5 +1,5 @@
 node_modules/
-yarn.lock
+**/yarn.lock
 .DS_Store
 .DS_Store?
 ._*
