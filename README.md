@@ -45,6 +45,8 @@ yarn test
 ```
 
 [![asciicast](https://asciinema.org/a/147023.png)](https://asciinema.org/a/147023)
+<script src="https://asciinema.org/a/147023.js" id="asciicast-147023" async data-autoplay="true" data-size="big"></script>
+
 
 <!---
 Explain how to run the automated tests for this system
