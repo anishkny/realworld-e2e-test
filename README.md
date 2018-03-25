@@ -46,7 +46,6 @@ yarn test
 
 [![asciicast](https://storage.googleapis.com/realworld-e2e-test/screencast-short.gif)](https://asciinema.org/a/147023?t=0)
 
-
 <!---
 Explain how to run the automated tests for this system
 
