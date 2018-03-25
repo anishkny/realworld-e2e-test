@@ -8,7 +8,7 @@ install:
   - ps: Install-Product node $env:nodejs_version
   - npm install
   - npm install -g yarn
-  - yarn run start
+  - cd packages; sh start.sh
 
 # Post-install test scripts.
 test_script:
