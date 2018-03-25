@@ -44,7 +44,7 @@ This step will start the backend server at port 3000 and frontend static server 
 yarn test
 ```
 
-[![asciicast](https://storage.googleapis.com/realworld-e2e-test/screencast.gif)](https://asciinema.org/a/147023)
+[![asciicast](https://storage.googleapis.com/realworld-e2e-test/web.gif)](https://asciinema.org/a/147023?t=0)
 
 
 <!---
