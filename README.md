@@ -5,6 +5,8 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/anishkny/realworld-e2e-test.svg)](https://greenkeeper.io/)
 [![Known Vulnerabilities](https://snyk.io/test/github/anishkny/realworld-e2e-test/badge.svg)](https://snyk.io/test/github/anishkny/realworld-e2e-test)
 
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/anishkny.svg)](https://saucelabs.com/u/anishkny)
+
 An end-to-end integration test example for a [RealWorld](https://realworld.io) [React](https://github.com/gothinkster/react-redux-realworld-example-app)/[NodeJS](https://github.com/gothinkster/node-express-realworld-example-app) stack using [Mocha](https://mochajs.org) and [Chrome Puppeteer](https://github.com/GoogleChrome/puppeteer).
 
 Demonstrates spinning up both the frontend (React/Redux) and backend (NodeJS) stacks for the RealWorld Conduit webapp, and then using Mocha to drive a headless Chrome via Puppeteer.
