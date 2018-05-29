@@ -7,8 +7,8 @@ Dependencies are expressed through the [`package.json`](package.json) file in th
 To start the frontend and backend stacks, you can execute:
 
 ```
-yarn
-yarn start
+npm install
+npm run start
 ```
 
 which will pull in code from the respecive GitHub repos of the stacks locally and call the startup script [`start.sh`](start.sh).

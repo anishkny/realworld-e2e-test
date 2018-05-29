@@ -20,7 +20,6 @@ Designed to work with [CircleCI](https://circleci.com/gh/anishkny/realworld-e2e-
 ```
 Docker CE 17+ (for Mongo)
 Node 7+ (for Puppeteer)
-Yarn
 ```
 
 ### Installing
@@ -33,15 +32,15 @@ docker run -p 27017:27017 mongo
 
 Install dependencies and start the app aka system under test (SUT)
 ```
-yarn
-yarn run start
+npm install
+npm run start
 ```
 This step will start the backend server at port 3000 and frontend static server at port 4100. If all went well, you can navigate your browser to: http://localhost:4100/
 
 ## Running the tests
 
 ```
-yarn test
+npm test
 ```
 
 [![asciicast](https://storage.googleapis.com/realworld-e2e-test/screencast-short.gif)](https://asciinema.org/a/147023?t=0)
