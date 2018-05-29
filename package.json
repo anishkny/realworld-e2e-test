@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "start": "cd packages && yarn && yarn run start",
-    "stop": "cd packages && yarn run stop",
+    "start": "cd packages && npm install && npm run start",
+    "stop": "cd packages && npm run stop",
     "pretest": "mkdir -p .screenshots/",
     "test": "mocha",
     "snyk-protect": "snyk protect",
