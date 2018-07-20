@@ -13,6 +13,8 @@ Designed to work with [CircleCI](https://circleci.com/gh/anishkny/realworld-e2e-
 
 ![Screencast](https://storage.googleapis.com/realworld-e2e-test/realworld-e2e-test.mov.gif)
 
+Cross-browser Testing Platform and Open Source <3 Provided by [Sauce Labs](https://saucelabs.com)
+
 ## Getting Started
 
 ### Prerequisites
