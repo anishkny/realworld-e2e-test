@@ -1,7 +1,7 @@
 # RealWorld End-to-End Integration Testing
 
 [![CircleCI](https://circleci.com/gh/anishkny/realworld-e2e-test.svg?style=shield)](https://circleci.com/gh/anishkny/realworld-e2e-test)
-[![Travis](https://img.shields.io/travis/anishkny/realworld-e2e-test.svg)](https://travis-ci.org/anishkny/realworld-e2e-test)
+[![Travis](https://img.shields.io/travis/anishkny/realworld-e2e-test/master.svg)](https://travis-ci.org/anishkny/realworld-e2e-test)
 [![Greenkeeper badge](https://badges.greenkeeper.io/anishkny/realworld-e2e-test.svg)](https://greenkeeper.io/)
 [![Known Vulnerabilities](https://snyk.io/test/github/anishkny/realworld-e2e-test/badge.svg)](https://snyk.io/test/github/anishkny/realworld-e2e-test)
 
@@ -25,7 +25,6 @@ Cross-browser Testing Platform and Open Source <3 Provided by [Sauce Labs][homep
 ```
 Docker CE 17+ (for Mongo)
 Node 7+ (for Puppeteer)
-Yarn
 ```
 
 ### Installing
@@ -38,18 +37,18 @@ docker run -p 27017:27017 mongo
 
 Install dependencies and start the app aka system under test (SUT)
 ```
-yarn
-yarn run start
+npm install
+npm run start
 ```
 This step will start the backend server at port 3000 and frontend static server at port 4100. If all went well, you can navigate your browser to: http://localhost:4100/
 
 ## Running the tests
 
 ```
-yarn test
+npm test
 ```
 
-[![asciicast](https://asciinema.org/a/147023.png)](https://asciinema.org/a/147023)
+[![asciicast](https://storage.googleapis.com/realworld-e2e-test/screencast-short.gif)](https://asciinema.org/a/147023?t=0)
 
 <!---
 Explain how to run the automated tests for this system

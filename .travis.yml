@@ -1,11 +1,9 @@
 language: node_js
-node_js: "8"
+node_js:
+- "8"
+- "10"
 
 sudo: required
 services: mongodb
 
-install: yarn
-
-before_script: yarn run start
-
-script: yarn test
+before_script: npm run start

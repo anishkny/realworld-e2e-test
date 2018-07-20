@@ -14,9 +14,9 @@ jobs:
       - run:
           name: Start app and test
           command: |
-            yarn
-            yarn run start
-            yarn run test
+            npm install
+            npm run start
+            npm run test
       - save_cache:
           key: node-modules-{{ checksum "package.json" }}
           paths:
