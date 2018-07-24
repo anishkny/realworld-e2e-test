@@ -11,7 +11,7 @@
     "casual": "^1.5.17",
     "chai": "^4.1.2",
     "mocha": "^5.0.0",
-    "puppeteer": "^1.0.0",
+    "puppeteer": "^1.6.1",
     "snyk": "^1.69.10"
   },
   "license": "MIT",
