@@ -3,7 +3,6 @@
 [![CircleCI](https://circleci.com/gh/anishkny/realworld-e2e-test.svg?style=shield)](https://circleci.com/gh/anishkny/realworld-e2e-test)
 [![Travis](https://img.shields.io/travis/anishkny/realworld-e2e-test/master.svg)](https://travis-ci.org/anishkny/realworld-e2e-test)
 [![Greenkeeper badge](https://badges.greenkeeper.io/anishkny/realworld-e2e-test.svg)](https://greenkeeper.io/)
-[![Known Vulnerabilities](https://snyk.io/test/github/anishkny/realworld-e2e-test/badge.svg)](https://snyk.io/test/github/anishkny/realworld-e2e-test)
 
 An end-to-end integration test example for a [RealWorld](https://realworld.io) [React](https://github.com/gothinkster/react-redux-realworld-example-app)/[NodeJS](https://github.com/gothinkster/node-express-realworld-example-app) stack using [Mocha](https://mochajs.org) and [Chrome Puppeteer](https://github.com/GoogleChrome/puppeteer).
 
