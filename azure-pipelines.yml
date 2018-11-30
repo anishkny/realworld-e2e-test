@@ -1,0 +1,21 @@
+# Node.js with React
+# Build a Node.js project that uses React.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+pool:
+  vmImage: 'Ubuntu 16.04'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '8.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    docker run -p 27017:27017 mongo &
+    npm install
+    npm run start &
+    sleep 5
+    npm test
+  displayName: 'Test'
