@@ -8,7 +8,7 @@
   "dependencies": {
     "casual": "^1.5.17",
     "chai": "^4.1.2",
-    "mocha": "^5.0.0",
+    "mocha": "^6.2.0",
     "puppeteer": "^1.6.1"
   },
   "license": "MIT"
