@@ -7,4 +7,6 @@ services: docker
 
 before_script:
   - docker run -p 27017:27017 mongo:3.4 &
+  - sleep 10
+  - until curl http://localhost:27017; do sleep 1; date; echo Waiting for MongoDB...; done
   - npm run start &
