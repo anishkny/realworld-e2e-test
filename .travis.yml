@@ -3,7 +3,8 @@ node_js:
 - "8"
 - "10"
 
-sudo: required
-services: mongodb
+services: docker
 
-before_script: npm run start
+before_script:
+  - npm run start &
+  - docker run -p 27017:27017 mongo:3.4 &
