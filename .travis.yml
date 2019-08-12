@@ -6,5 +6,5 @@ node_js:
 services: docker
 
 before_script:
-  - npm run start &
   - docker run -p 27017:27017 mongo:3.4 &
+  - npm run start &
