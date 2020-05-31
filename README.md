@@ -10,7 +10,7 @@ Demonstrates spinning up both the frontend (React/Redux) and backend (NodeJS) st
 
 Designed to work with [CircleCI](https://circleci.com/gh/anishkny/realworld-e2e-test) and [Travis CI](https://travis-ci.org/anishkny/realworld-e2e-test).
 
-![Screencast](https://storage.googleapis.com/realworld-e2e-test/realworld-e2e-test.mov.gif)
+![Screencast](https://realworld-e2e-test-assets.netlify.app/realworld-e2e-test.gif)
 
 Cross-browser Testing Platform and Open Source <3 Provided by [Sauce Labs](https://saucelabs.com)
 
@@ -44,7 +44,7 @@ This step will start the backend server at port 3000 and frontend static server 
 npm test
 ```
 
-[![asciicast](https://storage.googleapis.com/realworld-e2e-test/screencast-short.gif)](https://asciinema.org/a/147023?t=0)
+[![asciicast](https://realworld-e2e-test-assets.netlify.app/screencast-short.gif)](https://asciinema.org/a/147023?t=0)
 
 <!---
 Explain how to run the automated tests for this system
