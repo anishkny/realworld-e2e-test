@@ -10,8 +10,6 @@ Designed to work with [CircleCI](https://circleci.com/gh/anishkny/realworld-e2e-
 
 ![Screencast](https://realworld-e2e-test-assets.netlify.app/realworld-e2e-test.gif)
 
-Cross-browser Testing Platform and Open Source <3 Provided by [Sauce Labs](https://saucelabs.com)
-
 ## Getting Started
 
 ### Prerequisites
